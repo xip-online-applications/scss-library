@@ -1,0 +1,8 @@
+/// Import this in your Angular projects
+
+/// Hides router-outlet elements, because route components are rendered
+/// after the router-outlet element (as sibling). This can get in the
+/// way when using css grids
+router-outlet {
+  display: none;
+}
