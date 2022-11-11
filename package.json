@@ -1,8 +1,8 @@
 {
-  "name": "scss-library",
+  "name": "@xip-online-applications/scss-library",
   "version": "1.0.0",
   "description": "Helper library of common SCSS mixins, functions and some utility classes.",
-  "main": "src",
+  "files": ["src"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xip-online-applications/scss-library.git"
