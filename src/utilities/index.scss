@@ -2,8 +2,7 @@ $loop-start: 1 !default;
 $loop-end: 32 !default;
 $spacer: 0.25rem !default;
 
-/// Padding
-
+// #region PADDING
 @for $i from $loop-start through $loop-end {
   .p-#{$i} {
     padding: calc($i * $spacer);
@@ -21,11 +20,10 @@ $spacer: 0.25rem !default;
     padding-left: calc($i * $spacer);
   }
 }
+// #endregion
 
-/// Margin
-
+// #region MARGIN
 @for $i from $loop-start through $loop-end {
-  // Margin
   .m-#{$i} {
     margin: calc($i * $spacer);
   }
@@ -50,3 +48,19 @@ $spacer: 0.25rem !default;
 .ml-right {
   margin-right: auto;
 }
+// #endregion
+
+// #region FLEX
+.flex {
+  display: flex;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+@for $i from $loop-start through $loop-end {
+  .gap-#{$i} {
+    gap: calc($i * $spacer);
+  }
+}
+// #endregion
