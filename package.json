@@ -1,6 +1,6 @@
 {
   "name": "@xip-online-applications/scss-library",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Helper library of common SCSS mixins, functions and some utility classes.",
   "files": [
     "src"
