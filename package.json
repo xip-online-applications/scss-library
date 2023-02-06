@@ -1,9 +1,15 @@
 {
   "name": "@xip-online-applications/scss-library",
-  "version": "1.0.2",
+  "version": "0.0.0",
   "description": "Helper library of common SCSS mixins, functions and some utility classes.",
   "files": [
-    "src"
+    "reset",
+    "utilities",
+    "mixins",
+    "functions",
+    "README.me",
+    "CHANGELOG.md",
+    "LICENSE"
   ],
   "repository": {
     "type": "git",
@@ -20,6 +26,14 @@
   "homepage": "https://github.com/xip-online-applications/scss-library#readme",
   "main": "src",
   "scripts": {
-    "test": "exit 0"
+    "stylelint": "stylelint '**/*.{css,scss}'"
+  },
+  "prettier": "@xip-online-applications/prettier-config",
+  "stylelint": {
+    "extends": "@xip-online-applications/stylelint-config"
+  },
+  "devDependencies": {
+    "@xip-online-applications/prettier-config": "^0.3.4",
+    "@xip-online-applications/stylelint-config": "^0.4.4"
   }
 }
