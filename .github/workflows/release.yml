@@ -1,22 +1,45 @@
-name: Publish Library
+name: Publish
 
 on:
-    release:
-        types: [created]
+  push:
+    branches:
+      - feature/add-auto-publish-and-coding-standards
+
+permissions:
+  contents: write
+  packages: write
 
 jobs:
   publish:
-    runs-on: ubuntu-latest
-    permissions:
-      packages: write
-      contents: read
+    name: Package
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [18.13.0]
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout 🛎
+        uses: actions/checkout@v3
         with:
-          node-version: 16
-          registry-url: 'https://npm.pkg.github.com'
-      - run: npm ci
-      - run: npm publish
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup node env 🏗
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Install dependencies ⏳
+        run: npm ci
+
+      - name: Publish package 🚀
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_PUBLISH_TOKEN }}" >> .npmrc
+          echo "@xip-online-applications:registry=https://registry.npmjs.org/" >> .npmrc
+          npx lerna publish --no-private --conventional-commits --yes
