@@ -1,0 +1,14 @@
+{
+  "name": "@xip-online-applications/scss",
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/xip-online-applications/scss-library.git",
+    "directory": "packages/scss"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "XIP Online Applications <info@x-ip.nl>"
+}

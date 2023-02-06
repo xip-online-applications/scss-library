@@ -1,16 +1,14 @@
 {
-  "name": "@xip-online-applications/scss-library",
-  "version": "0.0.0",
-  "description": "Helper library of common SCSS mixins, functions and some utility classes.",
-  "files": [
-    "reset",
-    "utilities",
-    "mixins",
-    "functions",
-    "README.me",
-    "CHANGELOG.md",
-    "LICENSE"
+  "name": "scss-library",
+  "private": true,
+  "engines": {
+    "npm": ">=8.19.3 <9.0.0",
+    "node": ">=18.13.0 <19.0.0"
+  },
+  "workspaces": [
+    "packages/*"
   ],
+  "description": "Helper library of common SCSS mixins, functions and some utility classes.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xip-online-applications/scss-library.git"
@@ -18,15 +16,14 @@
   "keywords": [
     "SCSS"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "X-IP Online Applications",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/xip-online-applications/scss-library/issues"
   },
   "homepage": "https://github.com/xip-online-applications/scss-library#readme",
-  "main": "src",
   "scripts": {
-    "stylelint": "stylelint '**/*.{css,scss}'"
+    "stylelint": "stylelint 'packages/**/*.scss'"
   },
   "prettier": "@xip-online-applications/prettier-config",
   "stylelint": {
@@ -34,6 +31,7 @@
   },
   "devDependencies": {
     "@xip-online-applications/prettier-config": "^0.3.4",
-    "@xip-online-applications/stylelint-config": "^0.4.4"
+    "@xip-online-applications/stylelint-config": "^0.4.6",
+    "lerna": "^6.4.1"
   }
 }
