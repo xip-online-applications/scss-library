@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/xip-online-applications/scss-library/compare/@xip-online-applications/scss@1.3.0...@xip-online-applications/scss@1.3.1) (2023-02-07)
+
+
+### Bug Fixes
+
+* fix typo in readme filename ([f54dd34](https://github.com/xip-online-applications/scss-library/commit/f54dd342163fc6970cc6e9f980c83c4425e9d50e))
+
+
+
+
+
 # [1.3.0](https://github.com/xip-online-applications/scss-library/compare/@xip-online-applications/scss@1.2.0...@xip-online-applications/scss@1.3.0) (2023-02-07)
 
 
