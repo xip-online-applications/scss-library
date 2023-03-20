@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/xip-online-applications/scss-library/compare/@xip-online-applications/scss@1.3.1...@xip-online-applications/scss@1.4.0) (2023-03-20)
+
+
+### Features
+
+* add cursor pointer to button and anchor in SCSS reset ([b628ceb](https://github.com/xip-online-applications/scss-library/commit/b628ceba3a968e56aca39e80d4dfdc19eeb3f064))
+
+
+
+
+
 ## [1.3.1](https://github.com/xip-online-applications/scss-library/compare/@xip-online-applications/scss@1.3.0...@xip-online-applications/scss@1.3.1) (2023-02-07)
 
 
