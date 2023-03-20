@@ -49,6 +49,12 @@
     text-rendering: optimizespeed;
   }
 
+  // Give anchor and button element a cursor pointer
+  button,
+  a {
+    cursor: pointer;
+  }
+
   // A elements that don't have a class get default styles
   a:not([class]) {
     text-decoration-skip-ink: auto;
